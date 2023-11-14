@@ -1,23 +1,28 @@
-function lookupCountry() {
-    var countryInput = document.getElementById('country').value;
+document.addEventListener('DOMContentLoaded', function () {
 
-    var xhr = new XMLHttpRequest();
+    function lookupCountry() {
 
-    xhr.open('GET', 'world.php?country=' + encodeURIComponent(countryInput), true);
+        var countryInput = document.getElementById('country').value;
 
-    xhr.onload = function () {
-        if (xhr.status >= 200 && xhr.status < 300) {
-            document.getElementById('result').innerHTML = xhr.responseText;
-        } else {
-            console.error('Request failed with status', xhr.status);
-        }
-    };
+        var xhr = new XMLHttpRequest();
 
-    xhr.onerror = function () {
-        console.error('Request failed');
-    };
+        xhr.open('GET', 'world.php?country=' + encodeURIComponent(countryInput), true);
 
-    xhr.send();
-}
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
 
-document.getElementById('lookup').addEventListener('click', lookupCountry);
+                document.getElementById('result').innerHTML = xhr.responseText;
+            } else {
+                console.error('Request failed with status', xhr.status);
+            }
+        };
+
+        xhr.onerror = function () {
+            console.error('Request failed');
+        };
+
+        xhr.send();
+    }
+
+    document.getElementById('lookup').addEventListener('click', lookupCountry);
+});
