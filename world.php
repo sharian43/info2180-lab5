@@ -4,6 +4,9 @@ $username = 'lab5_user';
 $password = 'password123';
 $dbname = 'world';
 
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+
 // Get the country name from the GET request, default to an empty string if not provided
 $countryName = isset($_GET['country']) ? '%' . $_GET['country'] . '%' : '';
 
@@ -24,8 +27,19 @@ try {
 }
 ?>
 
-<ul>
+<table border="1">
+    <tr>
+        <th>Country Name</th>
+        <th>Continent</th>
+        <th>Independence Year</th>
+        <th>Head of State</th>
+    </tr>
     <?php foreach ($results as $row): ?>
-        <li><?= $row['name'] . ' is ruled by ' . $row['head_of_state']; ?></li>
+        <tr>
+            <td><?= $row['name']; ?></td>
+            <td><?= $row['continent']; ?></td>
+            <td><?= $row['independence_year']; ?></td>
+            <td><?= $row['head_of_state']; ?></td>
+        </tr>
     <?php endforeach; ?>
-</ul>
+</table>

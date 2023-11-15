@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var xhr = new XMLHttpRequest();
 
-        xhr.open('GET', 'world.php?country=' + encodeURIComponent(countryInput), true);
+        xhr.open('GET', "http://localhost/info2180-lab5/world.php?country=" + encodeURIComponent(countryInput), true);
 
         xhr.onload = function () {
             if (xhr.status >= 200 && xhr.status < 300) {

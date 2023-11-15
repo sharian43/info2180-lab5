@@ -6,12 +6,12 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 0 10px;
-    background: #52796F;
+    background: #edede9;
     overflow: hidden;
 }
 header {
-    background: #354F52;
-    color: #845EC2;
+    background: #6c757d;
+    color: #fff;
     text-align: center;
     padding: 1em 0;
 }
@@ -39,15 +39,21 @@ input[type="search"] {
     width: 70%;
     padding: 8px;
     margin-right: 10px;
+    box-shadow: 0 4px #E2E8F0;
+    border: 2px solid #E2E8F0;
+    border-radius: 5px;
+    grid-template-rows: 40% 10% 50%;
+    color: #212529;
 }
 
 /* Style the lookup button */
 button {
     padding: 8px 15px;
-    background-color: #333;
+    background-color: #619b8a;
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /* Change button color on hover */
@@ -73,4 +79,17 @@ button:hover {
         margin-right: 0;
         margin-bottom: 10px;
     }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #dddddd; 
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; 
 }
