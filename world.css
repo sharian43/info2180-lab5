@@ -9,11 +9,23 @@ body {
     background: #edede9;
     overflow: hidden;
 }
+
 header {
-    background: #6c757d;
+    background-color: #6c757d;
     color: #fff;
-    text-align: center;
-    padding: 1em 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10%;
+    padding: 0 160px;
+}
+
+img {
+    padding: 20px;
+    width: 300px;
+    height: 240px;
+    border-radius: 15%;
+    margin: 0;
 }
 
 main {
@@ -24,6 +36,9 @@ main {
 
 #controls {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
 }
 
 label {
@@ -48,31 +63,40 @@ input[type="search"] {
 
 /* Style the lookup button */
 button {
-    padding: 8px 15px;
-    background-color: #619b8a;
-    color: #fff;
-    border: none;
+    padding: 6px 10px;
     cursor: pointer;
     border-radius: 5px;
 }
 
-/* Change button color on hover */
-button:hover {
+#lookup {
+    background-color: #619b8a;
+    color: #fff;
+    border: none;
+}
+
+#lookup:hover {
     background-color: #845EC2;
 }
 
-/* Style the result section */
+#lookupCities {
+    background-color: #023e8a;
+    color: #fff;
+    border: none;
+}
+
+#lookupCities:hover {
+    background-color: #5B75A1;
+}
+
 #result {
     border: none;
     padding: 10px;
 }
 
-/* Add spacing to result items */
 .result-item {
     margin-bottom: 10px;
 }
 
-/* Media query for responsiveness */
 @media (max-width: 600px) {
     input[type="search"] {
         width: 100%;
